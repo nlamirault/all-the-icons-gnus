@@ -45,14 +45,15 @@
                (list (rx bow (group ,word ""))
                      ,icon ',props)))
 
-(pretty-gnus "From"              ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "Subject"           ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "To"                ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "CC"                ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "Date"              ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "Content-Type"      ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "User-Agent"        ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "X-PGP-Fingerprint" ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "From: "              ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "Subject: "           ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "To: "                ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "CC: "                ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "Reply-To: "          ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "Date: "              ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "Content-Type: "      ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "User-Agent: "        ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "X-PGP-Fingerprint: " ? (:foreground "#375E97" :height 1.2))
 
 (defun all-the-icons-gnus--add-faces ()
   "Add face properties and compose symbols for buffer from pretty-gnus-article."
