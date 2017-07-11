@@ -13,6 +13,8 @@ Develop:
 
 ``all-the-icons-gnus`` add some icons from [all-the-icons.el][] for Gnus buffers.
 
+![bento](screenshot-0.1.0.png)
+
 ## Installation
 
 The recommended way to install ``all-the-icons-gnus`` is via [MELPA][]:
