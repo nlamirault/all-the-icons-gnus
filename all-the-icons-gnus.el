@@ -42,7 +42,7 @@
 (defmacro pretty-gnus (word icon props)
   "Replace sanitized word with icon, props."
   `(add-to-list 'pretty-gnus-article-alist
-               (list (rx bow (group ,word ""))
+               (list (rx bow (group ,word " : "))
                      ,icon ',props)))
 
 (pretty-gnus "From: "              ? (:foreground "#375E97" :height 1.2))
@@ -51,8 +51,10 @@
 (pretty-gnus "CC: "                ? (:foreground "#375E97" :height 1.2))
 (pretty-gnus "Reply-To: "          ? (:foreground "#375E97" :height 1.2))
 (pretty-gnus "Date: "              ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "Organization: "      ? (:foreground "#375E97" :height 1.2))
 (pretty-gnus "Content-Type: "      ? (:foreground "#375E97" :height 1.2))
 (pretty-gnus "User-Agent: "        ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "X-mailer: "          ? (:foreground "#375E97" :height 1.2))
 (pretty-gnus "X-PGP-Fingerprint: " ? (:foreground "#375E97" :height 1.2))
 
 (defun all-the-icons-gnus--add-faces ()
@@ -60,7 +62,6 @@
   (interactive)
   (with-silent-modifications
     (--each pretty-gnus-article-alist
-      (message "it: %s" it)
       (-let (((rgx icon props) it))
         (save-excursion
           (goto-char (point-min))
