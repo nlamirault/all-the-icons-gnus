@@ -47,7 +47,7 @@
 
 (pretty-gnus "From"              ? (:foreground "#375E97" :height 1.2))
 (pretty-gnus "Subject"           ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "To"                ? (:foreground "#375E97" :height 1.2))
+(pretty-gnus "To"                ? (:foreground "#375E97" :height 1.2))
 (pretty-gnus "CC"                ? (:foreground "#375E97" :height 1.2))
 (pretty-gnus "Date"              ? (:foreground "#375E97" :height 1.2))
 (pretty-gnus "Content-Type"      ? (:foreground "#375E97" :height 1.2))
