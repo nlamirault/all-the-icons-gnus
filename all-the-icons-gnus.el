@@ -2,8 +2,8 @@
 
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; Version: 0.1.0
-;; Keywords: gnus icons dired
-;; Package-Requires: ((emacs "24.4") (dash "2.13.0") (all-the-icons "3.1.0"))
+;; Keywords: mail tools
+;; Package-Requires: ((emacs "24.4") (dash "2.12.0") (all-the-icons "3.1.0"))
 
 ;; Copyright (C) 2017 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
@@ -39,23 +39,23 @@
 
 (setq pretty-gnus-article-alist nil)
 
-(defmacro pretty-gnus (word icon props)
+(defmacro all-the-icons-gnus--pretty-gnus (word icon props)
   "Replace sanitized word with icon, props."
   `(add-to-list 'pretty-gnus-article-alist
                (list (rx bow (group ,word " : "))
                      ,icon ',props)))
 
-(pretty-gnus "From: "              ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "Subject: "           ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "To: "                ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "CC: "                ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "Reply-To: "          ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "Date: "              ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "Organization: "      ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "Content-Type: "      ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "User-Agent: "        ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "X-mailer: "          ? (:foreground "#375E97" :height 1.2))
-(pretty-gnus "X-PGP-Fingerprint: " ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "From: "              ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "Subject: "           ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "To: "                ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "CC: "                ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "Reply-To: "          ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "Date: "              ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "Organization: "      ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "Content-Type: "      ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "User-Agent: "        ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "X-mailer: "          ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "X-PGP-Fingerprint: " ? (:foreground "#375E97" :height 1.2))
 
 (defun all-the-icons-gnus--add-faces ()
   "Add face properties and compose symbols for buffer from pretty-gnus-article."
