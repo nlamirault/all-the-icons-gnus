@@ -32,10 +32,6 @@
 
 (require 'gnus)
 (require 'all-the-icons)
-(require 'dash)
-
-(require 'dash)
-(require 'all-the-icons)
 
 (setq pretty-gnus-article-alist nil)
 
