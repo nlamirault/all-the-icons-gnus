@@ -68,6 +68,7 @@
               (add-face-text-property
                (match-beginning 1) (match-end 1) props))))))))
 
+
 (defun all-the-icons-gnus--set-format ()
   (setq gnus-topic-line-format "%i[  %(%{%n -- %A%}%) ]%v\n"
 
@@ -87,7 +88,7 @@
 ;;;###autoload
 (defun all-the-icons-gnus-setup ()
   "Add icons for Gnus."
-  (advice-add 'gnus-summary-next-article :after 'all-the-icons-gnus--add-faces)
+  ;; (advice-add 'gnus-summary-next-article :after 'all-the-icons-gnus--add-faces)
   (all-the-icons-gnus--set-format))
 
 
