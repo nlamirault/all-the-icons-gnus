@@ -70,20 +70,51 @@
 
 
 (defun all-the-icons-gnus--set-format ()
-  (setq gnus-topic-line-format "%i[  %(%{%n -- %A%}%) ]%v\n"
+  (setq
 
-        gnus-group-line-format "%1M%1S%5y  : %(%-50,50G%)\n"
+   ;; gnus-topic-line-format "%i[  %(%{%n -- %A%}%) ]%v\n"
+   gnus-topic-line-format (concat "%i[ "
+                                  (propertize (all-the-icons-faicon "folder-open")
+                                              'display '(raise 0.0))
+                                  " %(%{%n -- %A%}%) ]%v\n")
 
-        gnus-summary-line-format "%1{%U%R%z: %}%[%2{%&user-date;%}%]  %4{%-34,34n%} %3{ %}%(%1{%B%}%s%)\n"
+   ;; gnus-group-line-format "%1M%1S%5y  : %(%-50,50G%)\n"
+   gnus-group-line-format (concat "%1M%1S%5y "
+                                  (propertize (all-the-icons-faicon "envelope")
+                                              'display '(raise 0.0))
+                                  " : %(%-50,50G%)\n")
 
-        gnus-user-date-format-alist '((t . " %Y-%m-%d %H:%M"))
+   ;; gnus-summary-line-format "%1{%U%R%z: %}%[%2{%&user-date;%}%]  %4{%-34,34n%} %3{ %}%(%1{%B%}%s%)\n"
+   gnus-summary-line-format (concat "%1{%U%R%z: %}%[%2{%&user-date;%}%] "
+                                    (propertize (all-the-icons-faicon "male")
+                                                'display '(raise 0.0))
+                                    " %4{%-34,34n%} %3{"
+                                    (propertize (all-the-icons-faicon "terminal")
+                                                'display '(raise 0.0))
+                                    " %}%(%1{%B%}%s%)\n")
 
-        gnus-sum-thread-tree-root " "
-        gnus-sum-thread-tree-false-root " "
-        gnus-sum-thread-tree-single-indent " "
-        gnus-sum-thread-tree-leaf-with-other " "
-        gnus-sum-thread-tree-vertical " "
-        gnus-sum-thread-tree-single-leaf " "))
+   ;; gnus-user-date-format-alist '((t . " %Y-%m-%d %H:%M"))
+   gnus-user-date-format-alist (list (cons t (concat (propertize (all-the-icons-faicon "calendar")
+                                                                 'display '(raise 0.0))
+                                                     " %Y-%m-%d %H:%M")))
+
+   gnus-sum-thread-tree-root (concat (propertize (all-the-icons-faicon "envelope")
+                                                 'display '(raise 0.0))
+                                     " ") ;; " "
+   gnus-sum-thread-tree-false-root (concat (propertize (all-the-icons-faicon "chevron-circle-right")
+                                                       'display '(raise 0.0))
+                                           " ") ;; " "
+   gnus-sum-thread-tree-single-indent (concat (propertize (all-the-icons-faicon "envelope-o")
+                                                          'display '(raise 0.0))
+                                              " ") ;; " "
+   gnus-sum-thread-tree-leaf-with-other (concat (propertize (all-the-icons-faicon "envelope")
+                                                            'display '(raise 0.0))
+                                                " ") ;; " "
+   gnus-sum-thread-tree-vertical " "
+   gnus-sum-thread-tree-single-leaf (concat (propertize (all-the-icons-faicon "envelope-o")
+                                                        'display '(raise 0.0))
+                                            " ") ;; " "
+   ))
 
 ;;;###autoload
 (defun all-the-icons-gnus-setup ()
