@@ -41,17 +41,50 @@
                (list (rx bow (group ,word " : "))
                      ,icon ',props)))
 
-(all-the-icons-gnus--pretty-gnus "From: "              ? (:foreground "#375E97" :height 1.2))
-(all-the-icons-gnus--pretty-gnus "Subject: "           ? (:foreground "#375E97" :height 1.2))
-(all-the-icons-gnus--pretty-gnus "To: "                ? (:foreground "#375E97" :height 1.2))
-(all-the-icons-gnus--pretty-gnus "CC: "                ? (:foreground "#375E97" :height 1.2))
-(all-the-icons-gnus--pretty-gnus "Reply-To: "          ? (:foreground "#375E97" :height 1.2))
-(all-the-icons-gnus--pretty-gnus "Date: "              ? (:foreground "#375E97" :height 1.2))
-(all-the-icons-gnus--pretty-gnus "Organization: "      ? (:foreground "#375E97" :height 1.2))
-(all-the-icons-gnus--pretty-gnus "Content-Type: "      ? (:foreground "#375E97" :height 1.2))
-(all-the-icons-gnus--pretty-gnus "User-Agent: "        ? (:foreground "#375E97" :height 1.2))
-(all-the-icons-gnus--pretty-gnus "X-mailer: "          ? (:foreground "#375E97" :height 1.2))
-(all-the-icons-gnus--pretty-gnus "X-PGP-Fingerprint: " ? (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "From: "
+                                 ;; ?
+                                 (all-the-icons-faicon "male")
+                                 (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "Subject: "
+                                 ;; ?
+                                 (all-the-icons-faicon "envelope")
+                                 (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "To: "
+                                 ;; ?
+                                 (all-the-icons-faicon "user")
+                                 (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "CC: "
+                                 ;; ?
+                                 (all-the-icons-octicon "puzzle")
+                                 (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "Reply-To: "
+                                 ;; ?
+                                 (all-the-icons-faicon "sign-out")
+                                 (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "Date: "
+                                 ;; ?
+                                 (all-the-icons-faicon "calendar")
+                                 (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "Organization: "
+                                 ;; ?
+                                 (all-the-icons-faicon "university")
+                                 (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "Content-Type: "
+                                 ;; ?
+                                 (all-the-icons-faicon "question-circle")
+                                 (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "User-Agent: "
+                                 ;; ?
+                                 (all-the-icons-faicon "chrome")
+                                 (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "X-mailer: "
+                                 ;; ?
+                                 (all-the-icons-faicon "chrome")
+                                 (:foreground "#375E97" :height 1.2))
+(all-the-icons-gnus--pretty-gnus "X-PGP-Fingerprint: "
+                                 ;; ?
+                                 (all-the-icons-faicon "expeditedssl")
+                                 (:foreground "#375E97" :height 1.2))
 
 (defun all-the-icons-gnus--add-faces ()
   "Add face properties and compose symbols for buffer from pretty-gnus-article."
